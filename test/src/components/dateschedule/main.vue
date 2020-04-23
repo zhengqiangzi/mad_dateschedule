@@ -111,7 +111,7 @@
                         }}}>
                     </date-schedule>
                     <el-dialog
-                        title="提示"
+                        title=" 提示  "
                         visible={ this.visible }
                         before-close={ this.handleClose }
                         close-on-press-escape={ false }

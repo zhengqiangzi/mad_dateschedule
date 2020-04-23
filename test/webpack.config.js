@@ -38,9 +38,10 @@ module.exports={
 			"vue-form":"vue-form",
 			"numeral":"numeral",
 			"validator":'./validator',
+			"vue":'vue',
 		},
 		function(context, request, callback) {
-
+				console.log(request)
 			 if (request=="validator"){
 			        return callback(null, 'commonjs ' + request);
 			    }
