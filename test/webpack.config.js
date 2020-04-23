@@ -20,7 +20,7 @@ module.exports={
 		rules: [
 			{ test: /\.vue$/, use: [{loader:'vue-loader'}] },
 			{ test: /\.js$/, use: [{loader:'babel-loader'}] },
-			{ test: /\.css$/, use: [{loader:'css-loader'}] },
+			{ test: /\.css$/, use: [{loader:'style-loader'},{loader:'css-loader'}] },
 		]
 	},
 	plugins: [
