@@ -1,6 +1,6 @@
 {
   "name": "mad_dateschedule",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "(```) <date-schedule-table :disabled=\"disabled\" v-model=\"list\" :edit_ranger=\"edit_ranger\" :initdate=\"initdate\"> \r     </date-schedule-table>\r (```)",
   "main": "./test/dist/index.js",
   "scripts": {
