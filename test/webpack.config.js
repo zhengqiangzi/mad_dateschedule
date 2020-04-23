@@ -31,10 +31,24 @@ module.exports={
 	  	extensions: ['.js','.vue']
 
 	 },
-	externals: {
-		"moment": 'moment',
-		"lodash": 'lodash',
-	}
+	externals: [
+		{
+			"moment": 'moment',
+			"lodash": 'lodash',
+			"vue-form":"vue-form",
+			"numeral":"numeral",
+			"validator":'./validator',
+		},
+		function(context, request, callback) {
+
+			 if (request=="./validator"){
+			        return callback(null, 'commonjs ' + request);
+			    }
+			
+				callback();
+		}
+
+	]
 
 
 }
