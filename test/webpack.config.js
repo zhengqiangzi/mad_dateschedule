@@ -37,7 +37,6 @@ module.exports={
 			"lodash": 'lodash',
 			"vue-form":"vue-form",
 			"numeral":"numeral",
-			"validator":'./validator',
 			"vue":'vue',
 		},
 		function(context, request, callback) {
