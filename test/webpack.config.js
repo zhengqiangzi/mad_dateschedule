@@ -41,7 +41,7 @@ module.exports={
 		},
 		function(context, request, callback) {
 
-			 if (request=="./validator"){
+			 if (request=="validator"){
 			        return callback(null, 'commonjs ' + request);
 			    }
 			
