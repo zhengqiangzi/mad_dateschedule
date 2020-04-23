@@ -2,7 +2,7 @@
   "name": "mad_dateschedule",
   "version": "1.0.3",
   "description": "(```) <date-schedule-table :disabled=\"disabled\" v-model=\"list\" :edit_ranger=\"edit_ranger\" :initdate=\"initdate\"> \r     </date-schedule-table>\r (```)",
-  "main": "./src/test/dist/index.js",
+  "main": "./test/dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js"
