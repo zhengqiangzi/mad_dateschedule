@@ -3,10 +3,16 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports={
 
- 	 entry: './src/main.js',
+ 	 entry: {
+ 	 	index:'./src/main.js',
+ 	},
  	 output:{
  	 	path:path.resolve("./dist"),
- 	 	filename:"index.js"
+ 	 	filename:"[name].js",
+		libraryTarget: "umd",
+		library: "mad_dateschedule"
+
+
 
  	 },
  	 mode:"production",
@@ -24,7 +30,11 @@ module.exports={
 	resolve:{
 	  	extensions: ['.js','.vue']
 
-	 }
+	 },
+	externals: {
+		"moment": 'moment',
+		"lodash": 'lodash',
+	}
 
 
 }
