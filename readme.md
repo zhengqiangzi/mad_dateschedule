@@ -5,15 +5,17 @@
 ```
 <date-schedule-table :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
 </date-schedule-table>
-
+```
 ## 组件按装
 ```
      npm install mad_dateschedule --save-dev
-
+```
 ## 参数说明
 ### 组件参数 v-model/value (必要参数,如果没有数据，可以传入[])
+
 	v-model/value 需要传入到日期表格里面的数据。如果没有需要传入的数据。则v-model/value 为[]
 	v-model/value 需要传入时，数据格式 如下
+	
     ```
         [
             ....{
