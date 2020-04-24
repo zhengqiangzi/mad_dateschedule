@@ -1,7 +1,6 @@
 # DataSchedule2 说明文档
 
 ## 应用实例 
-
 ```
 <date-schedule-table :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
 </date-schedule-table>
@@ -13,21 +12,21 @@
 ## 参数说明
 ### 组件参数 v-model/value (必要参数,如果没有数据，可以传入[])
 
-	v-model/value 需要传入到日期表格里面的数据。如果没有需要传入的数据。则v-model/value 为[]
-	v-model/value 需要传入时，数据格式 如下
-	
-    ```
-        [
-            ....{
-                id:moment().add(i,"day").format("YYYY-MM-DD"),
-                date:moment().add(i,"day"),
-                component_data:{
-                    clicks:Math.ceil(Math.random()*10000),
-                    impressions:Math.ceil(Math.random()*10000),
-                    budget:Math.ceil(Math.random()*10000).toFixed(2)
-                }
-            }....
-        ]
+v-model/value 需要传入到日期表格里面的数据。如果没有需要传入的数据。则v-model/value 为[]
+v-model/value 需要传入时，数据格式 如下
+
+```
+[
+    ....{
+	id:moment().add(i,"day").format("YYYY-MM-DD"),
+	date:moment().add(i,"day"),
+	component_data:{
+	    clicks:Math.ceil(Math.random()*10000),
+	    impressions:Math.ceil(Math.random()*10000),
+	    budget:Math.ceil(Math.random()*10000).toFixed(2)
+	}
+    }....
+]
     ```
 
 ### 组件参数 edit_ranger (非必要参数 默认为 [])
