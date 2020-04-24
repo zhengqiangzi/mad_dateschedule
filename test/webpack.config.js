@@ -39,14 +39,17 @@ module.exports={
 			"numeral":"numeral",
 			"vue":'vue',
 		},
-		function(context, request, callback) {
+	/* 	function(context, request, callback) {
+				console.log('********************************************************')
 				console.log(request)
+				console.log('********************************************************')
+
 			 if (request=="validator"){
 			        return callback(null, 'commonjs ' + request);
 			    }
 			
 				callback();
-		}
+		} */
 
 	]
 

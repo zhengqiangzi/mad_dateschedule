@@ -5,7 +5,7 @@
     import moment from "moment"
     import Vue from 'vue/dist/vue.esm.js';
     import { getFnList , dateTypeFn,methods } from "./option";
-    import { positive_integer, positive_float, format_number } from "validator";
+    import { positive_integer, positive_float, format_number } from "./validator";
 
     export default {
         props:{
@@ -83,7 +83,7 @@
             const budget_directives=[
                 {name:'positive-float'},
                 {name:"model",value:this.form.budget},
-                { name: 'format-number', value: 2 ,modifiers:{ nozero:true } },
+                {name: 'format-number', value: 2 ,modifiers:{ nozero:true } },
             ]
             const impressions_directives=[
                 {name:"model",value:this.form.impressions},
