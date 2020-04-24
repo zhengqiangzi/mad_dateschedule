@@ -4,10 +4,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports={
 
  	 entry: {
- 	 	index:'./src/main.js',
+ 	 	index:'./src/index.js',
  	},
  	 output:{
- 	 	path:path.resolve("./dist"),
+ 	 	path:path.resolve("../dist"),
  	 	filename:"[name].js",
 		libraryTarget: "umd",
 		library: "mad_dateschedule"
