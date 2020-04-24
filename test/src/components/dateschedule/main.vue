@@ -5,7 +5,6 @@
     import moment from "moment"
     import Vue from 'vue/dist/vue.esm.js';
     import { getFnList , dateTypeFn,methods } from "./option";
-    import { positive_integer, positive_float, format_number } from "./validator";
 
     export default {
         props:{
@@ -69,12 +68,7 @@
                 return this.value
             }
         },
-         directives: {
-            "positive-float": positive_float, //正浮点数
-            "format-number": format_number, //保留二位小数
-            "positive-integer": positive_integer, //正整数
-
-        },
+      
         methods: {
             ...methods
         },
