@@ -2,7 +2,7 @@
 
 ## 应用实例 
 ```
-<date-schedule-table :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
+<date-schedule-table :include_today="true"  :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
 </date-schedule-table>
 ```
 ## 组件按装
