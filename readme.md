@@ -3,8 +3,8 @@
 ## 应用实例 
 
 ```
-        <date-schedule-table :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
-        </date-schedule-table>
+<date-schedule-table :disabled="disabled" v-model="list" :edit_ranger="edit_ranger" :initdate="initdate"> 
+</date-schedule-table>
 ```
 
 ## 参数说明
