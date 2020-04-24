@@ -15,7 +15,7 @@
 v-model/value 需要传入到日期表格里面的数据。如果没有需要传入的数据。则v-model/value 为[]
 v-model/value 需要传入时，数据格式 如下
 
-	```
+	
 	[
 	    ....{
 		id:moment().add(i,"day").format("YYYY-MM-DD"),
@@ -27,7 +27,7 @@ v-model/value 需要传入时，数据格式 如下
 		}
 	    }....
 	]
-    	```
+    	
 
 ### 组件参数 edit_ranger (非必要参数 默认为 [])
     日期表格中的数据那些日期表格中的数据可以编辑
