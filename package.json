@@ -2,7 +2,7 @@
   "name": "mad_dateschedule",
   "version": "2.0.4",
   "description": "(```) <date-schedule-table :disabled=\"disabled\" v-model=\"list\" :edit_ranger=\"edit_ranger\" :initdate=\"initdate\"> \r     </date-schedule-table>\r (```)",
-  "main": "./test/dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js"
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/zhengqiangzi/mad_dateschedule#readme",
   "devDependencies": {
+    "babel-loader": "^8.1.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "vue": "^2.6.11",
