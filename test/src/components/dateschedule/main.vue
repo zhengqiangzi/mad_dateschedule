@@ -105,7 +105,7 @@
                         }}}>
                     </date-schedule>
                     <el-dialog
-                        title=" 提示  "
+                        title="计划设置"
                         visible={ this.visible }
                         before-close={ this.handleClose }
                         close-on-press-escape={ false }
@@ -113,61 +113,65 @@
                         close-on-click-modal={false}
                         on-closed={ ()=>{ this.fs._reset() } } >
                         <vue-form state={this.fs}>
-                            <div class="item-dateschedule-main-title"><h3>Time period {this.form.date_title } </h3></div>
+                            <div class="item-dateschedule-main-title"><h3>周期 {this.form.date_title } </h3></div>
                             <div class="item-dateschedule">
-                                <div class="item-dateschedule_title"><b>QSelect</b></div>
+                                <div class="item-dateschedule_title"><b>时间筛选</b></div>
                                 <div>
                                     <el-checkbox-group value={this.valueFilter} on-input={ this.valueFilterChangerHandler }>
-                                        <el-checkbox  label="odddays">Odd days</el-checkbox>
-                                        <el-checkbox  label="evendays">Even days</el-checkbox>
-                                        <el-checkbox  label="workdays">Workdays</el-checkbox>
-                                        <el-checkbox  label="weekends">Weekends</el-checkbox>
+                                        <el-checkbox  label="odddays">单日</el-checkbox>
+                                        <el-checkbox  label="evendays">双日</el-checkbox>
+                                        <el-checkbox  label="workdays">工作日</el-checkbox>
+                                        <el-checkbox  label="weekends">周末</el-checkbox>
                                     </el-checkbox-group>
                                 </div>
                             </div>
                             <div>
                                 <div class="item-dateschedule">
-                                    <div  class="item-dateschedule_title"><b>Daily budget limit:</b></div>
+                                    <div  class="item-dateschedule_title"><b>单日预算:</b></div>
                                     <validate>
                                         <el-input 
-                                            placeholder="请输入内容"  
+                                            placeholder="请输入预算"  
                                             value={this.form.budget } 
                                             on-input={ (e)=>{ this.formClickHandler('budget',e) } }
                                             { ...{ directives:budget_directives } }
                                             required
                                             name="budget"
-                                            big-than={0}>
+                                            big-than={0}
+                                            number-range={ { "target":[0,100000000] } } >
                                             <template slot="append"><i class="fa fa-jpy"></i></template>
                                         </el-input>
                                         {
                                             !this.fs.budget ? null:
                                             <field-messages name="budget"  class="text-danger" show={ (this.fs.budget.$dirty || this.fs.budget.$touched || this.fs.budget.$submitted).toString() } >
-                                                <div slot="required">Please enter daily budget</div>
-                                                <div slot="big-than">the budget should be more than 0</div>
+                                                <div slot="required">请输入预算</div>
+                                                <div slot="number-range">输入范围(0-100,000,000),支持两位小数!</div>
+                                                <div slot="big-than">输入范围(0-100,000,000),支持两位小数!</div>
                                             </field-messages>
                                         }
                                     </validate>
 
                                 </div>
                                 <div class="item-dateschedule">
-                                    <div  class="item-dateschedule_title"><b>Daily impressions limit（*1000）:</b></div>
+                                    <div  class="item-dateschedule_title"><b>单日展示限制（*1000）:</b></div>
                                     <div>
                                         <validate>
-                                        <el-input placeholder="请输入内容" 
+                                        <el-input placeholder="请输入展示数" 
                                          value={this.form.impressions } 
                                          on-input={ (e)=>{ this.formClickHandler('impressions',e) } }
                                          v-positive-integer
                                          required
                                          name="impressions"
                                         big-than={0}
+                                        number-range={ { "target":[0,100000000] } }
                                         {...{directives:impressions_directives}}>
                                             <template slot="append"><i class="fa fa-eye"></i></template>
                                          </el-input>
                                          {
                                            !this.fs.impressions ? null :
                                             <field-messages name="impressions" class="text-danger" show={ (this.fs.impressions.$dirty || this.fs.impressions.$touched || this.fs.impressions.$submitted).toString() }>
-                                                <div slot="required">Please enter daily impressions</div>
-                                                <div slot="big-than">the impressions should be more than 0</div>
+                                                <div slot="required">请输入展示数!</div>
+                                                <div slot="number-range">输入范围(0-100,000,000),支持整数!</div>
+                                                <div slot="big-than">输入范围(0-100,000,000),支持两位小数!</div>
                                             </field-messages>
                                          }
                                          </validate>
@@ -175,25 +179,27 @@
                                 </div>
 
                                 <div class="item-dateschedule">
-                                    <div  class="item-dateschedule_title"><b>Daily clicks limit:</b></div>
+                                    <div  class="item-dateschedule_title"><b>单日点击限制:</b></div>
                                     <div>
                                         <validate>
                                             <el-input 
-                                            placeholder="请输入内容"  
+                                            placeholder="请输入点击数"  
                                             name="click"
                                             value={this.form.clicks } 
                                             on-input={ (e)=>{ this.formClickHandler('clicks',e) } }
                                             name="clicks"
                                             required
                                             big-than={0}
+                                            number-range={ { "target":[0,100000000] } }
                                             { ...{ directives:clicks_directives} }>
                                                 <template slot="append"><i class="fa fa-hand-pointer-o"></i></template>
                                             </el-input>
                                            { 
                                                 !this.fs.clicks ? null : 
                                                 <field-messages name="clicks" class="text-danger" show={ (this.fs.clicks.$dirty || this.fs.clicks.$touched || this.fs.clicks.$submitted).toString() } >
-                                                    <div slot="required">Please enter daily clicks</div>
-                                                    <div slot="big-than">the daily clicks should be more than 0</div>
+                                                    <div slot="required">请输入点击数!</div>
+                                                    <div slot="number-range">输入范围(0-100,000,000),支持整数!</div>
+                                                    <div slot="big-than">输入范围(0-100,000,000),支持两位小数!</div>
                                                 </field-messages>
                                            }
                                         </validate>
