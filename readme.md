@@ -1,8 +1,8 @@
 # DataSchedule2 说明文档
 ## 运行集成环境
-  cd test && vue ui
+ ``` cd test && vue ui ```
 ## 发布组件
-   cd test && webpack && npm version xx.xx.xx && npm publish
+  ``` cd test && webpack && npm version xx.xx.xx && npm publish ```
 ## 应用实例 
 ```
 <date-schedule-table 
