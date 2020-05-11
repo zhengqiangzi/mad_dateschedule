@@ -27,9 +27,9 @@ export default {
     render(h){
 
         return   <div class="dateschedule_header">
-                    <div class="pre_btn" on-click={ this.preHandler }><a href="javascript:void(0)"><i class="el-icon-arrow-left"></i></a></div>
+                    <div class="pre_btn"><a href="javascript:void(0)"  on-click={ this.preHandler }><i class="el-icon-arrow-left"></i></a></div>
                     <div class="date_title">{ moment(this.date).format("YYYY-MM") }</div>
-                    <div class="next_btn" on-click={ this.nextHandler }><a href="javascript:void(0)"><i class="el-icon-arrow-right"></i></a></div>
+                    <div class="next_btn" ><a href="javascript:void(0)" on-click={ this.nextHandler }><i class="el-icon-arrow-right"></i></a></div>
                 </div>
 
 
