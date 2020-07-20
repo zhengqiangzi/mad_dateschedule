@@ -23,7 +23,7 @@
   "homepage": "https://github.com/zhengqiangzi/mad_dateschedule#readme",
   "devDependencies": {
     "babel-loader": "^8.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.1"
