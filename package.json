@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/zhengqiangzi/mad_dateschedule#readme",
   "devDependencies": {
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.3.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.1"
+    "vue-loader": "^17.0.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
